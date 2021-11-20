@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 350px; padding: 20px; }
+
+        @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hammersmith One', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #594F4F;
+    background: -moz-linear-gradient(-45deg, #1d4946  10%, #594F4F 100%);
+    background: -webkit-linear-gradient(-45deg, #1d4946  10%, #594F4F    100%);
+    background: linear-gradient(200deg, #1d4946  10%, #594F4F 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4946 ', endColorstr='594F4F   ', GradientType=1 );
+}
+.login-page{
+    background: rgb(235, 235, 235);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .4s;
+}
+.login-page:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.300);
+}
+.login-page h1{
+    margin-bottom: 30px;
+}
+.login-page form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-page form input  {
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    background: rgb(218, 218, 218);
+    border: none;
+    padding-left: 10px;
+    outline: none;
+    transition: all .4s;
+}
+.login-page form input:focus{
+    background: rgb(194, 194, 194);
+}
+.login-page form .btn{
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    background: #db02b0cc;
+    color: #e2e2e2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+}
+.login-page form .btn:hover{
+    background: #db02b08f;
+}
+.button {
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    font-size: 140%;
+    padding: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none; 
+}
+li {
+    display: inline-flex;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <li><a type="button" class="button" href="home.html">Home</a></li>
+<center>
+    <div class="wrapper login-page">
+        <h2>Sign Up</h2>
+        <p>Please fill this form to create an account.</p>
+        <form action="register.php" method="post">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" pattern="[a-zA-Z]{1,}" required>
+            </div>    
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" pattern="[a-zA-Z0-9]{6,}" required>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <input type="text" name="age" class="form-control" pattern="[0-9]{1,}" required>
+            </div>
+
+			<div class="form-group">
+                <label>Phone</label>
+                <input type="text" name="mob" class="form-control" pattern="[0-9]{10}" required>
+            </div>		
+
+            <div class="form-group">
+                <label>Gender</label>
+            </div>
+            <input type="radio" name="gender" value="M">Male
+            <input type="radio" name="gender" value="F">Female
+			
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+            <p>Already Registered? <a href="login.html">Login here</a>.</p>
+        </form>
+    </div>
+	</center>    
+</body>
+</html>
